@@ -7,6 +7,10 @@
     <groupId>com.imooc.ecommerce</groupId>
     <artifactId>ecommerce-springcloud</artifactId>
     <version>1.0-SNAPSHOT</version>
+    
+    <modules>
+        <module>e-commerce-common</module>
+    </modules>
 
     <!--    是为了给其他子工程提供支持的，不能是jar包，只能是pom-->
     <packaging>pom</packaging>

@@ -14,6 +14,17 @@ spring:
         server-addr: 192.168.1.11:8848
         # server-addr: 127.0.0.1:8848,127.0.0.1:8849,127.0.0.1:8850 # Nacos 服务器地址（集群部署）
         namespace: e5088f12-3475-4791-a3a7-af20e575c6a1
+        metadata:
+          management:
+            context-path: ${server.servlet.context-path}/actuator
+      # 配置管理
+      config:
+        prefix: imooc-e-commerce
+        file-extension: yml   # 配置内容的数据格式，默认为 properties
+        enable: true  # 如果不想使用 Nacos 进行配置管理，设置为false即可
+        group:  DEFAULT_GROUP # 组，默认为 DEFAULT_GROUP
+        namespace:  e5088f12-3475-4791-a3a7-af20e575c6a1
+        server-addr:  192.168.1.11:8848
 
 
 # 暴露端点( actuator 监控使用)

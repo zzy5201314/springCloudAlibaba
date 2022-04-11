@@ -13,6 +13,7 @@
         <module>e-commerce-mvc-config</module>
         <module>e-commerce-alibaba-nacos-client</module>
         <module>e-commerce-admin</module>
+        <module>e-commerce-email</module>
     </modules>
 
     <!--    是为了给其他子工程提供支持的，不能是jar包，只能是pom-->
@@ -38,6 +39,12 @@
         <jjwt-impl.version>0.10.5</jjwt-impl.version>
         <jjwt-jackson.version>0.10.5</jjwt-jackson.version>
         <fastjson.version>1.2.47</fastjson.version>
+        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+        <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
+        <mybatis-plus-boot-starter.version>3.1.2</mybatis-plus-boot-starter.version>
+        <mybatis-plus-generator.version>3.1.2</mybatis-plus-generator.version>
+        <freemarker.version>2.3.30</freemarker.version>
+        <mysql-connector-java.version>8.0.15</mysql-connector-java.version>
     </properties>
 
     <dependencies>
@@ -51,7 +58,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <!--            在测试的环境下才会生效-->
+            <!--                        在测试的环境下才会生效-->
             <scope>test</scope>
         </dependency>
         <!--        健康检查或者安全检查-->
@@ -96,6 +103,45 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>${fastjson.version}</version>
+        </dependency>
+        <!--        引入模板引擎 freemarker 用于 mybatis plus generator -->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${freemarker.version}</version>
+        </dependency>
+        <!--        实体属性 Swagger2 注解-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-swagger2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-swagger-ui.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <!--		引入 mysql -->
+        <!--		引入mysql-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
+        </dependency>
+        <!-- mybatis plus 代码生成器 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus-boot-starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatis-plus-generator.version}</version>
         </dependency>
     </dependencies>
 

@@ -40,6 +40,12 @@
             <artifactId>e-commerce-mvc-config</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
+        <!--        实现对 Java Mail 配置-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-mail</artifactId>-->
+        <!--        </dependency>-->
     </dependencies>
 
     <!--

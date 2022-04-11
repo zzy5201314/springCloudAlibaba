@@ -1,21 +1,21 @@
 package com.imooc.ecommerce;
 
-import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
+ * <h1>授权中心启动入口</h1>
+ *
  * @author zzy
- * @date 2022/4/4
+ * @date 2022/4/11
  */
-@EnableAdminServer
-@EnableDiscoveryClient
 @SpringBootApplication
-public class EmailApplication {
+@EnableDiscoveryClient
+public class AuthorityCenterApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(EmailApplication.class, args);
+        SpringApplication.run(AuthorityCenterApplication.class, args);
     }
 }

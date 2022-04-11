@@ -14,6 +14,7 @@
         <module>e-commerce-alibaba-nacos-client</module>
         <module>e-commerce-admin</module>
         <module>e-commerce-email</module>
+        <module>e-commerce-authority-center</module>
     </modules>
 
     <!--    是为了给其他子工程提供支持的，不能是jar包，只能是pom-->
@@ -39,12 +40,18 @@
         <jjwt-impl.version>0.10.5</jjwt-impl.version>
         <jjwt-jackson.version>0.10.5</jjwt-jackson.version>
         <fastjson.version>1.2.47</fastjson.version>
+
+        <!--        针对 持久层 框架 以及 api model-->
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
         <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
         <mybatis-plus-boot-starter.version>3.1.2</mybatis-plus-boot-starter.version>
         <mybatis-plus-generator.version>3.1.2</mybatis-plus-generator.version>
         <freemarker.version>2.3.30</freemarker.version>
         <mysql-connector-java.version>8.0.15</mysql-connector-java.version>
+        <screw-core.version>1.0.3</screw-core.version>
+
+        <spring-cloud-starter-alibaba-nacos-discovery.version>2.2.3.RELEASE
+        </spring-cloud-starter-alibaba-nacos-discovery.version>
     </properties>
 
     <dependencies>
@@ -104,6 +111,17 @@
             <artifactId>fastjson</artifactId>
             <version>${fastjson.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <!--         spring cloud alibaba nacos discovery-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>${spring-cloud-starter-alibaba-nacos-discovery.version}</version>
+        </dependency>
+
         <!--        引入模板引擎 freemarker 用于 mybatis plus generator -->
         <dependency>
             <groupId>org.freemarker</groupId>
@@ -121,12 +139,7 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${springfox-swagger-ui.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
         <!--		引入 mysql -->
-        <!--		引入mysql-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -143,6 +156,13 @@
             <artifactId>mybatis-plus-generator</artifactId>
             <version>${mybatis-plus-generator.version}</version>
         </dependency>
+        <!--        生成数据库文档 使用 screw-core 和 freemarker-->
+        <dependency>
+            <groupId>cn.smallbun.screw</groupId>
+            <artifactId>screw-core</artifactId>
+            <version>${screw-core.version}</version>
+        </dependency>
+
     </dependencies>
 
     <!--    项目依赖管理 父项目只是声明依赖，子项目需要写明需要的依赖（可以省略版本信息） -->

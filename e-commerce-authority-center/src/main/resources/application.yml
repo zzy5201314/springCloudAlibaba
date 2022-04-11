@@ -1,5 +1,23 @@
+server:
+  port: 7000
+  servlet:
+    context-path: /ecommerce-authority-center
+
 spring:
+  application:
+    name: e-commerce-authority-center
+  cloud:
+    nacos:
+      discovery:
+        enabled: true # 如果不想使用 Nacos 进行服务注册和发现，改为 false 即可
+        server-addr: 192.168.1.11:8848  # Nacos 服务器地址
+          namespace: e5088f12-3475-4791-a3a7-af20e575c6a1
+          metadata:
+            management:
+              context-path: ${server.servlet.context-path}/actuator
+  # datasource 配置
   datasource:
+    type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.1.3:3306/ecommerce?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
     password: root
@@ -13,6 +31,7 @@ spring:
       connection-timeout: 30000
       max-lifetime: 1800000
       connection-test-query: SELECT 1
+
 
 # mybatis-plus 配置
 mybatis-plus:
@@ -28,3 +47,13 @@ mybatis-plus:
         logic-not-delete-value: 1
         # 删除后
         logic-delete-value: 0
+
+# 暴露端点( actuator 监控使用)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

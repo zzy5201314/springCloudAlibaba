@@ -18,6 +18,8 @@ public class AdminApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(AdminApplication.class, args);
+        SpringApplication app = new SpringApplication(AdminApplication.class);
+        Environment env = app.run(args).getEnvironment();
+        System.out.println(env.getProperty("spring.application.name")+ "\tinit success;port:\t" +env.getProperty("server.port"));
     }
 }

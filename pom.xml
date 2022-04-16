@@ -15,6 +15,7 @@
         <module>e-commerce-admin</module>
         <module>e-commerce-email</module>
         <module>e-commerce-authority-center</module>
+        <module>e-commerce-gateway</module>
     </modules>
 
     <!--    是为了给其他子工程提供支持的，不能是jar包，只能是pom-->

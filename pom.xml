@@ -51,7 +51,7 @@
         <mysql-connector-java.version>8.0.15</mysql-connector-java.version>
         <screw-core.version>1.0.3</screw-core.version>
 
-        <spring-cloud-starter-alibaba-nacos-discovery.version>2.2.3.RELEASE
+        <spring-cloud-starter-alibaba-nacos-discovery.version>2.1.1.RELEASE
         </spring-cloud-starter-alibaba-nacos-discovery.version>
     </properties>
 

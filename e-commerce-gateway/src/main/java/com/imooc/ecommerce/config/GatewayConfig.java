@@ -1,5 +1,6 @@
 package com.imooc.ecommerce.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @author zzy
  * @date 2022/4/16
  */
+@Slf4j
 @Configuration
 public class GatewayConfig {
 
@@ -42,6 +44,7 @@ public class GatewayConfig {
     @Value("${spring.cloud.nacos.discovery.server-addr}")
     public void setNacosServerAddr(String nacosServerAddr){
         NACOS_SERVER_ADDR = nacosServerAddr;
+
     }
 
     @Value("${spring.cloud.nacos.discovery.namespace}")

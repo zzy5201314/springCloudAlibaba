@@ -10,7 +10,7 @@ spring:
     nacos:
       discovery:
         enabled: true
-        server-addr: 192.168.1.11:8848
+        server-addr: 192.168.56.101:8848
         namespace: e5088f12-3475-4791-a3a7-af20e575c6a1
         metadata:
           management:

@@ -1,6 +1,8 @@
 ### 查询服务实例信息
 GET http://127.0.0.1:8000/ecommerce-nacos-client/nacos-client/service-instance
 Accept: application/json;
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJ1c2VyaWRcIjoxNCxcInVzZXJuYW1lXCI6XCJ6ZW5nemhhb3lhbmdcIn0iLCJqdGkiOiJlMjZkMDU4Ny0zYzZiLTRjOGEtYmYzYS0yOGRmM2JmZDMxMWEiLCJleHAiOjE2NTI1NDQwMDB9.cbfOHIiK-XQMy_WeCHwP-558zRVmt8fawSpst4c1A0Pn3SkrkY8Eqfp8DC6AnCwSj525t2JK4DzKSl4tvOn5aTxkKV1e8ZQY2d0SZgG7nS-diU3syoEkW2f2uhXWE2--hoXKbCwHa8dZgX3vtNzm3ZUfQzPNekTqnaDmbFEezJGQHb-LOMNABwvSCpzj45aM27QtZYSQ6UYJZG24KG3KqT5bRSORElieLI8OXECF7s1YZyrjKnqXeRoHBJsOnCswxnULX8jbcLdlnKqqNk_Kzs9dkRAt1h2PwTrHej8QtvXTTjiLMpXXrjL99PQ82QH0lmDeap1GFp6J7whESmT9GQ
+token: imooc
 
 ### 发送邮件
 POST http://127.0.0.1:7002/e-commerce-mail/mailSend
@@ -8,3 +10,10 @@ POST http://127.0.0.1:7002/e-commerce-mail/mailSend
 
 ### 查询服务实例信息
 GET http://127.0.0.1:7002/e-commerce-mail//emailSend/text?account=1971166454
+
+
+### 查询服务实例信息
+GET http://127.0.0.1:9001/imooc/e-commerce-nacos-client/nacos-client/service-instance?serviceId=e-commerce-nacos-client
+Accept: application/json;
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJ1c2VyaWRcIjoxNCxcInVzZXJuYW1lXCI6XCJ6ZW5nemhhb3lhbmdcIn0iLCJqdGkiOiJlMjZkMDU4Ny0zYzZiLTRjOGEtYmYzYS0yOGRmM2JmZDMxMWEiLCJleHAiOjE2NTI1NDQwMDB9.cbfOHIiK-XQMy_WeCHwP-558zRVmt8fawSpst4c1A0Pn3SkrkY8Eqfp8DC6AnCwSj525t2JK4DzKSl4tvOn5aTxkKV1e8ZQY2d0SZgG7nS-diU3syoEkW2f2uhXWE2--hoXKbCwHa8dZgX3vtNzm3ZUfQzPNekTqnaDmbFEezJGQHb-LOMNABwvSCpzj45aM27QtZYSQ6UYJZG24KG3KqT5bRSORElieLI8OXECF7s1YZyrjKnqXeRoHBJsOnCswxnULX8jbcLdlnKqqNk_Kzs9dkRAt1h2PwTrHej8QtvXTTjiLMpXXrjL99PQ82QH0lmDeap1GFp6J7whESmT9GQ
+token: imooc

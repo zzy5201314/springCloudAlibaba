@@ -1,4 +1,4 @@
-package com.imooc.ecommerce;
+package com.imooc.ecommerce.filter;
 
 import com.imooc.ecommerce.constant.GatewayConstant;
 import lombok.extern.slf4j.Slf4j;

@@ -8,7 +8,6 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 /**
- *
  * HTTP 请求头部携带 Token 验证过滤器
  *
  * @author zzy
@@ -21,7 +20,7 @@ public class HeardTokenGatewayFilter implements GatewayFilter, Ordered {
 
         // 从 HTTP heard 中寻找 key 为 token ，value 为 imooc 的键值对
         String name = exchange.getRequest().getHeaders().getFirst("token");
-        if ("imooc".equals(name)){
+        if ("imooc".equals(name)) {
             return chain.filter(exchange);
         }
 

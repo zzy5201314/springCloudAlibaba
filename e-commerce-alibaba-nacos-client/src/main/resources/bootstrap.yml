@@ -1,11 +1,11 @@
 server:
   port: 8000
   servlet:
-    context-path: /ecommerce-nacos-client
+    context-path: /e-commerce-nacos-client
 
 spring:
   application:
-    name: ecommerce-nacos-client  # 应用名称也是构成  Nacos 配置管理 dataId 字段的一部分（当 config.prefix 为空时）
+    name: e-commerce-nacos-client  # 应用名称也是构成  Nacos 配置管理 dataId 字段的一部分（当 config.prefix 为空时）
   cloud:
     nacos:
       # 服务注册与发现

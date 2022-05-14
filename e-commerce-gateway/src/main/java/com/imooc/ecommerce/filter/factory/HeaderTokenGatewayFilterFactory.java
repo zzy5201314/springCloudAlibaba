@@ -6,13 +6,16 @@ import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFac
 import org.springframework.stereotype.Component;
 
 /**
+ *
+ * HeaderTokenGatewayFilterFactory 过滤器只取 GatewayFilterFactory 前面的 HeaderToken 这个作为名字
+ *
  * @author zzy
  * @date 2022/4/23
  */
 @Component
-public class HeardTokenGatewayFilterFactory extends AbstractGatewayFilterFactory<Object> {
+public class HeaderTokenGatewayFilterFactory extends AbstractGatewayFilterFactory<Object> {
     @Override
     public GatewayFilter apply(Object config) {
-        return new HeardTokenGatewayFilter();
+        return new HeardTokenGatewayFilter() ;
     }
 }

@@ -30,10 +30,19 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
-        <!-- 通过 sleuth 实现链路跟踪 -->
+<!--        &lt;!&ndash; 通过 sleuth 实现链路跟踪 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-sleuth</artifactId>-->
+<!--        </dependency>-->
+        <!-- zipkin = spring-cloud-starter-sleuth + spring-cloud-starter-zipkin -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-sleuth</artifactId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
         </dependency>
     </dependencies>
 

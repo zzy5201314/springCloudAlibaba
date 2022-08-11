@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="e-commerce-admin" />
+        <module name="e-commerce-account-service" />
         <module name="e-commerce-service-config" />
         <module name="e-commerce-authority-center" />
         <module name="e-commerce-gateway" />
@@ -24,6 +25,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="e-commerce-account-service" options="-parameters" />
       <module name="e-commerce-admin" options="-parameters" />
       <module name="e-commerce-alibaba-nacos-client" options="-parameters" />
       <module name="e-commerce-authority-center" options="-parameters" />

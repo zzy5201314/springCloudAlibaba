@@ -15,6 +15,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>e-commerce-service-config</module>
+        <module>e-commerce-account-service</module>
     </modules>
 
     <!--  模块名以及描述信息 -->

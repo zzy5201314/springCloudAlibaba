@@ -3,6 +3,7 @@ package ${package.Mapper};
 import ${package.Entity}.${entity};
 import ${superMapperClassPackage};
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 
 /**
@@ -17,6 +18,7 @@ import org.apache.ibatis.annotations.Mapper;
 interface ${table.mapperName} : ${superMapperClass}<${entity}>
 <#else>
  @Mapper
+ @Repository
 public interface ${table.mapperName} extends ${superMapperClass}<${entity}> {
 
 }

@@ -7,7 +7,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
 
 /**
  * TODO: Description
@@ -19,12 +21,13 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AddressInfo implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class AddressInfo {
 
     @ApiModelProperty(value = "用户 id")
     private Long userId;
+
+    @ApiModelProperty(value = "地址详细信息")
+    private List<AddressItem> addressItems;
 
     @ApiModel(description = "用户的单个地址信息")
     @Data
@@ -51,10 +54,10 @@ public class AddressInfo implements Serializable {
         private String addressDetail;
 
         @ApiModelProperty(value = "创建时间")
-        private Date createTime;
+        private LocalDateTime createTime;
 
         @ApiModelProperty(value = "更新时间")
-        private Date updateTime;
+        private LocalDateTime updateTime;
 
         public AddressItem(Long id){
             this.id = id;

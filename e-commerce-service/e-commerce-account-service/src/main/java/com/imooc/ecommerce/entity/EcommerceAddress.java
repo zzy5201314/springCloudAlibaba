@@ -1,16 +1,19 @@
 package com.imooc.ecommerce.entity;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.imooc.ecommerce.account.AddressInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * <p>
@@ -24,12 +27,13 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @ApiModel(value="TEcommerceAddress对象", description="用户地址表")
+@TableName(value = "t_ecommerce_address")
 public class EcommerceAddress implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "主键")
-    @TableId(type = IdType.UUID)
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     @ApiModelProperty(value = "用户 id")
@@ -51,10 +55,10 @@ public class EcommerceAddress implements Serializable {
     private String addressDetail;
 
     @ApiModelProperty(value = "创建时间")
-    private Date createTime;
+    private LocalDateTime createTime;
 
     @ApiModelProperty(value = "更新时间")
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
     /**
      * 根据 userId + AddressItem 得到 EcommerceAddress
@@ -64,16 +68,16 @@ public class EcommerceAddress implements Serializable {
      */
     public static EcommerceAddress toEcommerceAddress(Long userId, AddressInfo.AddressItem addressItem){
 
-        EcommerceAddress ecommerceAddress = new EcommerceAddress();
+        EcommerceAddress ecommerceAddresses = new EcommerceAddress();
 
-        ecommerceAddress.setUserId(userId);
-        ecommerceAddress.setUsername(addressItem.getUsername());
-        ecommerceAddress.setPhone(addressItem.getPhone());
-        ecommerceAddress.setProvince(addressItem.getProvince());
-        ecommerceAddress.setCity(addressItem.getCity());
-        ecommerceAddress.setAddressDetail(addressItem.getAddressDetail());
+        ecommerceAddresses.setUserId(userId);
+        ecommerceAddresses.setUsername(addressItem.getUsername());
+        ecommerceAddresses.setPhone(addressItem.getPhone());
+        ecommerceAddresses.setProvince(addressItem.getProvince());
+        ecommerceAddresses.setCity(addressItem.getCity());
+        ecommerceAddresses.setAddressDetail(addressItem.getAddressDetail());
 
-        return ecommerceAddress;
+        return ecommerceAddresses;
     }
 
     /**

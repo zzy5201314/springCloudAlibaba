@@ -39,7 +39,7 @@ public class AddressServiceTest extends BaseTest{
 
         log.info("test create address info: [{}]", JSON.toJSONString(
                 iEcommerceAddressService.createAddressInfo(
-                        new AddressInfo(loginUserInfo.getUserid(), Collections.singletonList(addressItem))
+                        new AddressInfo(loginUserInfo.getUserId(), Collections.singletonList(addressItem))
                 )
         ));
     }

@@ -21,10 +21,31 @@ public interface IEcommerceBalanceService extends IService<EcommerceBalance> {
     BalanceInfo getCurrentBalanceInfo();
 
     /**
-     * 扣减用户余额
+     * 增加当前用户余额
+     * @param balanceInfo
+     * @return
+     */
+    BalanceInfo addBalance(BalanceInfo balanceInfo);
+
+    /**
+     * 扣减当前用户余额
      * @param balanceInfo 代表想要扣减的余额
      * @return
      */
     BalanceInfo deductBalance(BalanceInfo balanceInfo);
+
+    /**
+     * 增加其他用户余额
+     * @param balanceInfo
+     * @return
+     */
+    BalanceInfo addOtherUserBalance(BalanceInfo balanceInfo);
+
+    /**
+     * 扣减其他用户余额
+     * @param balanceInfo 代表想要扣减的余额
+     * @return
+     */
+    BalanceInfo deductOtherUserBalance(BalanceInfo balanceInfo);
 
 }

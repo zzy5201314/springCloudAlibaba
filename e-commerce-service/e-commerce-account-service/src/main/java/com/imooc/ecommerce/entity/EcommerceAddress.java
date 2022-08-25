@@ -4,9 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import com.imooc.ecommerce.account.AddressInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -76,6 +74,8 @@ public class EcommerceAddress implements Serializable {
         ecommerceAddresses.setProvince(addressItem.getProvince());
         ecommerceAddresses.setCity(addressItem.getCity());
         ecommerceAddresses.setAddressDetail(addressItem.getAddressDetail());
+        ecommerceAddresses.setCreateTime(LocalDateTime.now());
+        ecommerceAddresses.setUpdateTime(LocalDateTime.now());
 
         return ecommerceAddresses;
     }

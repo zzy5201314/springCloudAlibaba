@@ -55,14 +55,14 @@ public class EcommerceAddressServiceImpl extends ServiceImpl<EcommerceAddressMap
 
         // 将传递的参数转换成实体对象
         List<EcommerceAddress> ecommerceAddresses = addressInfo.getAddressItems().stream()
-                .map(e -> EcommerceAddress.toEcommerceAddress(loginUserInfo.getUserid(), e))
+                .map(e -> EcommerceAddress.toEcommerceAddress(loginUserInfo.getUserId(), e))
                 .collect(Collectors.toList());
 
         // 保存到数据表并把返回记录的 id 给调用方
         List<Long> ids = new ArrayList<>();
         if (saveEcommerceAddress(ecommerceAddresses)) {
             ids = findIds(ecommerceAddresses);
-            log.info("create address info: [{}],[{}]", loginUserInfo.getUserid(), JSON.toJSONString(ids));
+            log.info("create address info: [{}],[{}]", loginUserInfo.getUserId(), JSON.toJSONString(ids));
         }
 
         return new TableId(
@@ -92,13 +92,13 @@ public class EcommerceAddressServiceImpl extends ServiceImpl<EcommerceAddressMap
         LoginUserInfo loginUserInfo = AccessContext.getLoginUserInfo();
 
         // 根据 userId 查询到用户的地址信息，再实现转换
-        List<EcommerceAddress> ecommerceAddresses = ecommerceAddressMapper.findAllByUserId(loginUserInfo.getUserid());
+        List<EcommerceAddress> ecommerceAddresses = ecommerceAddressMapper.findAllByUserId(loginUserInfo.getUserId());
         List<AddressInfo.AddressItem> addressItems = ecommerceAddresses.stream()
                 .map(EcommerceAddress::toAddressItem)
                 .collect(Collectors.toList());
 
 
-        return new AddressInfo(loginUserInfo.getUserid(), addressItems);
+        return new AddressInfo(loginUserInfo.getUserId(), addressItems);
     }
 
     @Override

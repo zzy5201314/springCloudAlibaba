@@ -17,6 +17,7 @@
         <module name="e-commerce-common" />
         <module name="e-commerce-mail" />
         <module name="e-commerce-email" />
+        <module name="e-commerce-goods-service" />
         <module name="e-commerce-alibaba-nacos-client" />
       </profile>
     </annotationProcessing>
@@ -33,6 +34,7 @@
       <module name="e-commerce-common" options="-parameters" />
       <module name="e-commerce-email" options="-parameters" />
       <module name="e-commerce-gateway" options="-parameters" />
+      <module name="e-commerce-goods-service" options="-parameters" />
       <module name="e-commerce-mail" options="-parameters" />
       <module name="e-commerce-mvc-config" options="-parameters" />
       <module name="e-commerce-service" options="-parameters" />

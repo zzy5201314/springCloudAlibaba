@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 public class LoginUserInfo {
 
     /** 用户的 userid */
-    private Long userid;
+    private Long userId;
 
     /** 用户名 */
     private String username;

@@ -1,5 +1,6 @@
 package com.imooc.ecommerce.vo.asyncTask;
 
+import com.imooc.ecommerce.constant.AsyncTaskStatusEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,9 @@ public class AsyncTaskInfo {
 
     /** 异步任务 id */
     private String taskId;
+
+    /** TODO: 异步任务执行状态 */
+    private AsyncTaskStatusEnum status;
 
     /** 异步任务开始时间 */
     private Date startTime;

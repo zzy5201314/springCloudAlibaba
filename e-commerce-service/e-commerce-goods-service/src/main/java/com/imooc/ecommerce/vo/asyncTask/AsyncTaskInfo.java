@@ -18,19 +18,19 @@ import java.util.Date;
 @NoArgsConstructor
 public class AsyncTaskInfo {
 
-    /** 异步任务 id */
+    /** TODO: 异步任务 id */
     private String taskId;
 
     /** TODO: 异步任务执行状态 */
     private AsyncTaskStatusEnum status;
 
-    /** 异步任务开始时间 */
+    /** TODO: 异步任务开始时间 */
     private Date startTime;
 
-    /** 异步任务结束时间 */
+    /** TODO: 异步任务结束时间 */
     private Date endTime;
 
-    /** 异步任务总耗时 */
+    /** TODO: 异步任务总耗时 */
     private String totalTime;
 
 

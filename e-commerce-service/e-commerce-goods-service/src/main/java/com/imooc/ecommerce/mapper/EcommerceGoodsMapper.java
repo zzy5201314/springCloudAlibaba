@@ -1,6 +1,7 @@
 package com.imooc.ecommerce.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.github.pagehelper.Page;
 import com.imooc.ecommerce.entity.EcommerceGoods;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -33,4 +34,14 @@ public interface EcommerceGoodsMapper extends BaseMapper<EcommerceGoods> {
             @Param("BrandCategory")String BrandCategory,
             @Param("GoodsName")String GoodsName
     );
+
+    /**
+     * TODO: 查询要求页数的数据
+     *
+     * @Author : zzy
+     * @Date 2022/8/30 14:38
+     * @param: page
+     * @return: java.util.List<com.imooc.ecommerce.entity.EcommerceGoods>
+     */
+    List<EcommerceGoods> findEcommerceGoodsByPage(Page<EcommerceGoods> page);
 }

@@ -2,8 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.imooc.ecommerce.mapper.EcommerceGoodsMapper">
 
-    <select id="findFirstPageByGoodsCategoryAndBrandCategoryAndGoodsName"
-            resultType="com.imooc.ecommerce.entity.EcommerceGoods">
+    <select id="findFirstPageByGoodsCategoryAndBrandCategoryAndGoodsName" resultType="com.imooc.ecommerce.entity.EcommerceGoods">
 			   SELECT
 			*
 		FROM
@@ -13,4 +12,11 @@
 			AND brand_category = #{BrandCategory}
 			AND goods_name = #{GoodsName}
     </select>
+
+    <select id="findEcommerceGoodsByPage" resultType="com.imooc.ecommerce.entity.EcommerceGoods">
+				SELECT
+			*
+		FROM
+			t_ecommerce_goods
+	</select>
 </mapper>
